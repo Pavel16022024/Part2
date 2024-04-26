@@ -1,0 +1,7 @@
+задание1
+
+SELECT c.login, count(o.id)
+FROM "Couriers" AS c
+JOIN "Orders" AS o ON c.id = o."courierId"
+WHERE "inDelivery" = true
+GROUP BY c.login;
